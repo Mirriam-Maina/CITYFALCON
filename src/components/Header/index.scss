@@ -1,0 +1,57 @@
+.fontStyle{
+    font-family: Lato;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.header{
+    height: 50px;
+    background-color: white;
+}
+
+
+img.logo{
+    float: left;
+    margin-left: 12px;
+    margin-top: 9px;
+}
+
+img.avatar{
+    border-radius: 50%;
+    float: right;
+    height: 35px;
+    width: 35px;
+    margin-top: 8px;
+    margin-right: 96px;
+}
+
+
+span.profile{
+    font-size: 14px;
+    color: #333333;
+    float: right;
+    margin-right: -105px;
+    margin-top: 17px;
+}
+
+img.profile-drop{
+    float: right;
+    width: 7px;
+    height: 7px;
+    margin-right: -118px;
+    margin-top: 23px;
+}
+
+.heading-title{
+    @extend .fontStyle;
+    color: #176bad;
+    font-size: 24px;
+    margin-top: 14px;
+    margin-bottom: 16px;
+    text-align: left;
+    margin-left: 48px;
+    height: 29px;
+}
