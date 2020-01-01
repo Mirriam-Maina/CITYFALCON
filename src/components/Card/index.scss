@@ -1,4 +1,5 @@
 $color: #ffff;
+$border-color: #cccc;
 
 .fontStyles{
     font-weight: bold;
@@ -10,12 +11,16 @@ $color: #ffff;
 
 .card{
   height: 57px;
-  border: solid 1px #cccc;
+  border: solid 1px $border-color;
   background-color: $color;
   border-radius: 3px;
   margin-bottom: 10px;
   margin-left: 48px;
   margin-right: 48px;
+
+  .description{
+      height: 100px;
+  }
 }
 
 img.sourceImage{
@@ -31,7 +36,17 @@ img.sourceImage{
 
 .title{
     @extend .fontStyles; 
-    height: 21px;
+    font-size: 16px;
+    text-align:left;
+    line-height: 1.31;
+    color: #292929;
+    margin-top: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.description{
+    @extend .fontStyles;
     font-size: 16px;
     text-align:left;
     line-height: 1.31;
@@ -39,6 +54,10 @@ img.sourceImage{
     margin-top: 10px;
 }
 
+.card .description{
+
+
+}
 .percentage{
     @extend .fontStyles;
     width: 42.7px;
@@ -53,7 +72,7 @@ img.sourceImage{
     color: $color;
 }
 
-img.readmore{
+img.readmore.false{
     transform: rotate(450deg);
     float: right;
     width: 13px;
@@ -61,6 +80,13 @@ img.readmore{
     padding: 0;
     margin-top: -40px;
     padding-left: 20px;
+    cursor: pointer;
+}
+
+img.readmore.true{
+    @extend img.readmore.false;
+    transform: rotate(270deg);
+    margin-top: -20px;
 }
 
 img.socialIcon{
@@ -82,9 +108,38 @@ span{
 }
 
 .drawer{
+    margin-top: -px;
     height: 44px;
     height: 44px;
-  border-radius: 3px;
-  border: solid 1px var(--white);
-  background-color: #f7f7f7;
+    border-radius: 3px;
+    margin-top: -10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: solid 1px $border-color;
+    background-color: #f7f7f7;
+    border-top: none;
+    margin-left: 48px;
+    margin-right: 48px;
+    margin-bottom: 10px;
+}
+
+.drawer.false{
+    display: none
+}
+
+.container{
+    float:right;
+    margin-right: 48px;
+}
+
+.reaction{
+    padding-top: 5px;
+    margin-bottom: 20px;
+    margin-right: -25px;
+    padding-left: 20px;
+}
+
+.reaction.bookmark{
+    height: 15px;
+    width: 15px;
 }

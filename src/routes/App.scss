@@ -1,3 +1,13 @@
+.fontStyle{
+  font-family: Lato;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+
 .App {
   text-align: center;
 }
@@ -26,6 +36,24 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.heading-title{
+  @extend .fontStyle;
+  color: #176bad;
+  font-size: 24px;
+  margin-top: 14px;
+  margin-bottom: 16px;
+  text-align: left;
+  margin-left: 48px;
+  height: 29px;
+}
+
+
+.card-container{
+  margin-right: 340px;
+  background-color: #f7f7f7;
+  padding-top: 8px;
 }
 
 @keyframes App-logo-spin {

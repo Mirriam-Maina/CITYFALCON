@@ -1,8 +1,10 @@
-import { all } from 'redux-saga/effects'
+import { all } from 'redux-saga/effects';
+import { watchgetWatchlist, getWatchListSaga } from './watchListSagas';
 
-function* rootSaga(){
+function* rootSaga() {
     yield all([
-
+        getWatchListSaga(),
+        watchgetWatchlist()
     ])
 }
 

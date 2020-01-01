@@ -1,28 +1,24 @@
 import { watchListTypes } from '../actions/watchlistActions';
 
 const initialState = {
-    loading: false,
+    loading: true,
     error: '',
     watchlist: []
 };
 
 
-const watchListReducer = (state = initialState, action) => {
+const watchListReducer = (state = { ...initialState }, action) => {
 
-    switch(action.type){
-        case(watchListTypes.GET_WATCHLIST):
+    switch (action.type) {
+
+        case (watchListTypes.GET_WATCHLIST_SUCCESS):
             return {
                 ...initialState,
-                loading: true
-            }
-
-        case(watchListTypes.GET_WATCHLIST_SUCCESS):
-            return {
-                ...initialState,
+                loading: false,
                 watchlist: action.response
             }
 
-        case(watchListTypes.GET_WATCHLIST_FAILURE):
+        case (watchListTypes.GET_WATCHLIST_FAILURE):
             return {
                 ...initialState,
                 error: action.response

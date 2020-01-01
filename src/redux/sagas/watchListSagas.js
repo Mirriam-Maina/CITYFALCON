@@ -1,21 +1,19 @@
 import { takeLatest, call, put } from 'redux-saga/effects';
 
 import Service from '../../services';
-import watchListTypes from '../actions/watchlistActions';
-import { getWatchList, getWatchListFailure, getWatchListSuccess } from '../actions/watchlistActions';
+import { watchListTypes } from '../actions/watchlistActions';
+import { getWatchListFailure, getWatchListSuccess } from '../actions/watchlistActions';
 
 
-export const getWatchListSaga = () => function* ({
-}) {
+export function* getWatchListSaga() {
   try {
-    const response = yield call(Service.get('https://www.dropbox.com/s/kyumbzcqqy3u367/stories.json?dl=0'));
-    console.log(response);
-    response ? yield put(getWatchListSuccess(response)) : yield put(getWatchList());
+    const response = yield call(Service.get);
+    yield put(getWatchListSuccess(response))
   } catch (error) {
-    yield put(getWatchListFailure(response));
+    yield put(getWatchListFailure(error));
   }
 };
 
-export const watchgetWatchlist = () => function* () {
-  yield takeLatest(watchListTypes.GET_WATCHLIST_SUCCESS, getWatchListSaga);
+export function* watchgetWatchlist() {
+  yield takeLatest(watchListTypes.GET_WATCHLIST_REQUEST, getWatchListSaga);
 };

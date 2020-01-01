@@ -1,9 +1,8 @@
-import axios from 'axios';
+import { data } from '../data';
 
 const Service = {
-    post: (URL, body) => axios.post(URL, body),
-    get: (URL) =>axios.get(URL)
+    post: (body) => data.stories.push(body),
+    get: () => data.stories
 }
-
 
 export default Service;
