@@ -13,6 +13,9 @@
     border-bottom: solid 1px #cccc;
 }
 
+img.menu{
+    visibility: hidden;
+}
 
 img.logo{
     float: left;
@@ -62,10 +65,17 @@ span.profile{
     height: 29px;
 }
 
-.profile-section{
+.profile-section.open{
     width: 149px;
     float: right;
-    background-color: #eeeeee;
+    background-color: #eee;
+    padding-bottom: 5px;
+}
+
+.profile-section.closed{
+    width: 149px;
+    float: right;
+    background-color:white;
     padding-bottom: 5px;
 }
 
@@ -85,4 +95,176 @@ span.profile{
     margin-left: 20px;
     margin-top: -1px;
     padding: 10px;
+}
+
+
+@media only screen and (max-width: 610px) {
+    img.logo{
+        margin-left: 180px;
+    }
+    
+    img.menu{
+        visibility: visible;
+        width: 30px;
+        height: 30px;
+        float: left;
+        margin-left: -300px;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    div.card{
+        height: 100px;
+    }
+
+    img.logo{
+        margin-left: 90px;
+    }
+    
+    img.menu{
+        visibility: visible;
+        width: 30px;
+        height: 30px;
+        float: left;
+        margin-left: -230px;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 375px){
+
+    img.logo{
+        margin-left: 75px;
+        width: 130px;
+    }
+
+    img.avatar{
+        width: 30px;
+        height: 30px;
+        padding-top: 5px;
+    }
+
+    img.menu{
+        visibility: visible;
+        width: 30px;
+        height: 30px;
+        float: left;
+        margin-left: -195px;
+        margin-top: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 250px) and (max-width: 395px){
+
+    div.title{
+        width: 150px;
+    }
+
+    img.logo{
+        margin-left: 60px;
+        width: 120px;
+        padding-top: 5px;
+    }
+    img.avatar{
+        width: 25px;
+        height: 25px;
+        padding-top: 5px;
+    }
+
+    span.profile{
+        width: 70px;
+        margin-left: -20px;
+        font-size: 14px;
+        margin-right: -95px;
+    }
+
+    .profile-drop{
+        margin-right: 15px;
+        margin-top: -14px;
+    }
+
+    .profile-section.closed{
+        padding: 2.6px;
+        width: 125px;
+        height: 45px;
+    }
+
+    .profile-section.open{
+        padding: 2.6px;
+        width: 125px;
+        height: 45px;
+    }
+
+    .signout{
+        width: 109.6px;
+    }
+    
+    img.menu{
+        visibility: visible;
+        width: 25px;
+        height: 25px;
+        float: left;
+        margin-left: -170px;
+        margin-top: 15px;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 482px) and (min-width: 420px){
+    div.title{
+        width: 150px;
+    }
+
+    img.logo{
+        margin-left: 60px;
+        width: 120px;
+        padding-top: 5px;
+    }
+    img.avatar{
+        width: 25px;
+        height: 25px;
+        padding-top: 5px;
+    }
+
+    span.profile{
+        width: 70px;
+        margin-left: -20px;
+        font-size: 14px;
+        margin-right: -95px;
+    }
+
+    .profile-drop{
+        margin-right: 15px;
+        margin-top: -14px;
+    }
+
+    .profile-section.closed{
+        padding: 2.6px;
+        width: 125px;
+        height: 45px;
+    }
+
+    .profile-section.open{
+        padding: 2.6px;
+        width: 125px;
+        height: 45px;
+    }
+
+    .signout{
+        width: 109.6px;
+    }
+    
+    img.menu{
+        visibility: visible;
+        width: 25px;
+        height: 25px;
+        float: left;
+        margin-left: -170px;
+        margin-top: 15px;
+    }
+    
 }

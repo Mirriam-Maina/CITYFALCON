@@ -17,10 +17,12 @@ $border-color: #cccc;
   margin-bottom: 10px;
   margin-left: 48px;
   margin-right: 48px;
+  vertical-align: middle;
+}
 
-  .description{
-      height: 100px;
-  }
+.card.open{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 img.sourceImage{
@@ -42,6 +44,7 @@ img.sourceImage{
     color: #292929;
     margin-top: 10px;
     text-decoration: none;
+    white-space: wrap;
     cursor: pointer;
 }
 
@@ -54,10 +57,6 @@ img.sourceImage{
     margin-top: 10px;
 }
 
-.card .description{
-
-
-}
 .percentage{
     @extend .fontStyles;
     width: 42.7px;
@@ -107,6 +106,11 @@ span{
     margin-bottom: 11px;
 }
 
+span.icons{
+        font-size: 11px; 
+        color: #8c8c8c
+}
+
 .drawer{
     margin-top: -px;
     height: 44px;
@@ -129,7 +133,8 @@ span{
 
 .container{
     float:right;
-    margin-right: 48px;
+    margin-right: 10px;
+
 }
 
 .reaction{
@@ -143,3 +148,251 @@ span{
     height: 15px;
     width: 15px;
 }
+
+@media only screen and (max-width: 1200px) {
+
+    .card{
+        height: 60px;
+    }
+    .title{
+      font-size: 12px;
+      word-wrap: break-word;
+      width: 600px;
+    }
+  
+    .sourceImage{
+      width: 20px;
+      height: 20px;
+    }
+
+    .percentage{
+        width: 33px;
+        height: 30px;
+        margin-right: 30px;
+        margin-top: -33px;
+        font-size: 12px;
+        position: relative;
+    }
+
+    .readmore{
+        margin-right: -3px
+    }
+
+
+  }
+
+
+@media only screen and (max-width: 780px) {
+
+    .card{
+        height: 100px;
+    }
+
+    .title{
+      font-size: 12px;
+      word-wrap: break-word;
+      width: 450px;
+    }
+  
+    .sourceImage{
+      width: 30px;
+      height: 30px;
+      padding-bottom: 20px;
+    }
+
+    .percentage{
+        width: 33px;
+        height: 30px;
+        margin-right: 30px;
+        margin-top: -33px;
+        font-size: 12px;
+        position: relative;
+    }
+
+    .readmore{
+        margin-right: -3px
+    }
+
+    .timestamp{
+        margin-top: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 750px){
+    .title{
+        font-size: 12px;
+        word-wrap: break-word;
+        width: 300px;
+      }
+}
+
+@media only screen and (max-width: 705px) {
+
+    .card{
+        height: 100px;
+    }
+
+    .title{
+      font-size: 12px;
+      word-wrap: break-word;
+      width: 300px;
+    }
+  
+    .sourceImage{
+      width: 30px;
+      height: 30px;
+    }
+
+    .percentage{
+        width: 33px;
+        height: 30px;
+        margin-right: 30px;
+        margin-top: -33px;
+        font-size: 12px;
+        position: relative;
+    }
+
+    .readmore{
+        margin-right: -3px
+    }
+
+}
+
+@media only screen and (max-width: 610px) {
+
+    .card{
+        height: 148px;
+    }
+
+    .title{
+      font-size: 16px;
+      word-wrap: break-word;
+      width: 313px;
+      margin-left: 10px;
+      margin-top: 30px;
+    }
+  
+    img.sourceImage{
+      width: 18px;
+      height: 18px;
+      margin-top: 35px ;
+      margin-left: 10px;
+      padding-bottom: 20px;
+    }
+
+    .percentage{
+        width: 33px;
+        height: 30px;
+        margin-right: 30px;
+        margin-top: -80px;
+        font-size: 12px;
+        position: relative;
+    }
+
+    img.readmore.false{
+        margin-right: -3px;
+        margin-top: -85px;
+        padding-top: 0;
+        display: relative;
+    }
+
+    img.readmore.true{
+        margin-right: -3px;
+        margin-top: -68px;
+        padding-top: 0;
+        display: relative;
+    }
+
+
+    .timestamp{
+        margin-left: 10px;
+        padding-top: 20px;
+
+    }
+
+}
+
+@media only screen and (max-width: 520px){
+    .card{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    img.sourceImage{
+        padding-bottom: 60px;
+        margin-top: 10px;
+    
+    }
+    div.title{
+        width: 250px;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .timestamp{
+        padding-top: 0px;
+        margin-top: 0px;
+        height: 20px;
+    }
+
+    .percentage{
+        margin-top: -55px;
+    }
+
+    img.readmore.false{
+        margin-top: -60px;
+    }
+
+    img.readmore.true{
+        margin-top: -40px;
+    }
+
+    .drawer{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 250px) and (max-width: 353px){
+    div.card{
+        margin-left: 5px;
+        margin-right: 5px;
+        height: 130px;
+    }
+
+    .drawer{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .percentage{
+        font-size: 10px;
+        height: 25px;
+        width: 27px;
+        margin-right: 23px;
+    }
+
+    img.readmore.false{
+        width: 10px;
+        height: 17px;
+        padding: 0;
+        padding-left: 15px;
+    }
+    
+    img.readmore.true{
+        margin-top: -40px;
+    }
+
+}
+
+@media only screen and (max-width: 482px) and (min-width: 420px){
+.card{
+    height: 100px;
+}
+    
+}
+
+
+

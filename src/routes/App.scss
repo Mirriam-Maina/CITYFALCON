@@ -56,11 +56,40 @@
   padding-top: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+
+@media only screen and (max-width: 1099px) {
+  .card-container{
+    margin-right: 0px
   }
 }
+
+@media only screen and (max-width: 780px) {
+  .card-container{
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .card-container{
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 520px) and  (min-width: 420 ){
+  .card-container{
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .card-container{
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+
+
+

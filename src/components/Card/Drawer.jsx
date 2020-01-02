@@ -19,7 +19,7 @@ const Drawer = (props) => {
                 </span>
                     &nbsp; &nbsp;
                 <span className='icons'>
-                        <img className='reaction' src={dislike} alt='dislike'></img> dislike
+                        <img className='reaction' src={dislike} alt='dislike'></img> Dislike
                 </span>
             </div>
         </div>

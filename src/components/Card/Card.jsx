@@ -8,20 +8,20 @@ const Card = (props) => {
     const { score, timeDiff, title, logo,
         openArticle, toggleDrawer, id,
         openDrawerID, openDrawer, domainName,
-        screenName, authorImage, followerCount } = props;
+        screenName, authorImage, followerCount, isTweet } = props;
 
     return (
         <Fragment>
-            <div className='card'>
+            <div className={`card ${openDrawerID === id && openDrawer ? 'open' : ''}`}>
                 <img className='sourceImage' src={authorImage ? authorImage : logo} alt='source'></img>
                 <div className='title' onClick={openArticle}>{title}</div>
                 <div className='timestamp'>
-                    {screenName ? <span><img src={twitter} className='socialIcon' alt='social'></img></span> : null}
+                    {isTweet ? <span><img src={twitter} className='socialIcon' alt='social'></img></span> : null}
                 <span>@{screenName ? screenName : domainName}</span>
                     &nbsp;&nbsp;
-                <span>{timeDiff} hours ago</span>
+                <span>{timeDiff} ago</span>
                     &nbsp;&nbsp;
-                    {screenName && openDrawerID === id && openDrawer ? <span>follower / ing ratio: {followerCount} </span> : null}
+                    {isTweet && openDrawerID === id && openDrawer ? <span>follower / ing ratio: {followerCount} </span> : null}
                 </div>
                 <div className='percentage'>{score}%</div>
                 <img

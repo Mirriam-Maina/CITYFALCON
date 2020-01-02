@@ -23,7 +23,7 @@ class CardView extends Component {
         this.setState(prevstate => ({ openDrawerID: id, openDrawer: !prevstate.openDrawer }));
     }
 
-    formatFollowerCount(followers){
+    formatFollowerCount = (followers) => {
         let count = Math.floor(followers/1000);
         if(count === 0){
             return followers;
@@ -33,6 +33,29 @@ class CardView extends Component {
             return `${count}M`
         }
         return `${count}K`
+    }
+
+    formatTime = (time) => {
+        let formattedTime = Math.floor(time/3600);
+        if(formattedTime === 0){
+           formattedTime = Math.floor(time/60);
+           return `${formattedTime} minutes`;
+        }
+        else return `${formattedTime} hours`; 
+    }
+
+    formatDomainName = (domainName) => {
+      if(domainName.includes('.com')){
+          return domainName.split('.')[0]
+      } 
+      else return domainName.replace(/\s/g, '')
+    }
+
+    isTweet = (category) => {
+        if((category === 'op') || (category === 'mp') || (category === 'r')) {
+            return false;
+        }
+        return true;
     }
 
     render() {
@@ -45,19 +68,19 @@ class CardView extends Component {
                     <Card
                         openArticle={() => this.openArticle(item.url)}
                         id={item.id}
-                        domainName={item.domain_name.includes('.com') ? item.domain_name.split('.')[0]:
-                         item.domain_name.replace(/\s/g, '')}
+                        domainName={this.formatDomainName(item.domain_name)}
                         authorImage={item.author_image_url}
                         followerCount={this.formatFollowerCount(item.author_followers_count)}
                         screenName={item.author_screen_name}
                         publishTime={item.publishTime}
                         score={item.score}
                         title={item.title}
+                        isTweet={this.isTweet(item.category)}
                         url={item.url}
                         openDrawer={openDrawer}
                         openDrawerID={openDrawerID}
                         logo={item.domain_cached_logo_url}
-                        timeDiff={Math.floor(item.publishTimeDiff/3600)}
+                        timeDiff={this.formatTime(item.publishTimeDiff)}
                         toggleDrawer={() => this.toggleDrawer(item.id)}
                     />
                     <Drawer
