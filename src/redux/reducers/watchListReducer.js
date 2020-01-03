@@ -21,6 +21,7 @@ const watchListReducer = (state = { ...initialState }, action) => {
         case (watchListTypes.GET_WATCHLIST_FAILURE):
             return {
                 ...initialState,
+                loading: false,
                 error: action.response
             }
         default:
